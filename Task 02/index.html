@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex E-Commerce Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>eCommerce Store</h1>
+    <button id="cartBtn">Cart (<span id="cartCount">0</span>)</button>
+  </header>
+
+  <button id="addToCartBtn" class="add-to-cart">Add to Cart</button>
+
+  <!-- Product Section with Slider and Thumbnails -->
+  <section class="product-section">
+    <h2>Products</h2>
+    <div class="slider-container">
+      <div class="slider" id="productSlider">
+        <img src="https://images.unsplash.com/photo-1629198688000-71f23e745b6e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHN8ZW58MHx8MHx8fDA%3D" alt="Product Image 1" class="active">
+        <img src="https://images.unsplash.com/photo-1524883173980-67b26d34e82c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZHVjdHN8ZW58MHx8MHx8fDA%3D" alt="Product Image 2">
+        <img src="https://plus.unsplash.com/premium_photo-1719289799376-d3de0ca4ddbc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHN8ZW58MHx8MHx8fDA%3D" alt="Product Image 3">
+      </div>
+      <div class="thumbnails">
+        <img src="https://images.unsplash.com/photo-1629198688000-71f23e745b6e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHN8ZW58MHx8MHx8fDA%3D" alt="Thumbnail 1" class="thumbnail active">
+        <img src="https://images.unsplash.com/photo-1524883173980-67b26d34e82c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZHVjdHN8ZW58MHx8MHx8fDA%3D" alt="Thumbnail 2" class="thumbnail">
+        <img src="https://plus.unsplash.com/premium_photo-1719289799376-d3de0ca4ddbc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHN8ZW58MHx8MHx8fDA%3D" alt="Thumbnail 3" class="thumbnail">
+      </div>
+      <button id="prevBtn">Prev</button>
+      <button id="nextBtn">Next</button>
+    </div>
+   
+  </section>
+
+  <section class="accordion-section">
+    <button class="accordion">Product Details</button>
+    <div class="panel">
+      <p>Product details go here...</p>
+    </div>
+  
+    <button class="accordion">Shipping Info</button>
+    <div class="panel">
+      <p>Shipping information goes here...</p>
+    </div>
+  </section>
+  
+
+  <!-- Modal for Cart -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cartItems">
+        <!-- Cart items will be dynamically added here -->
+      </div>
+      <p><strong>Total:</strong> $<span id="cartTotal">0.00</span></p>
+      <button id="checkoutBtn" class="checkout">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
